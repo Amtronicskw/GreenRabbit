@@ -23,7 +23,7 @@ export function Navbar() {
 
   const links = [
     { name: "Features", href: "#features" },
-    { name: "Premium", href: "#premium" },
+    { name: "Premium", href: "#pricing" },
     { name: "Download", href: "#download" },
   ];
 

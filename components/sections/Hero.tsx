@@ -192,7 +192,7 @@ export function Hero() {
 
             {/* Ghost See Premium Features */}
             <Link
-              href="#premium"
+              href="#pricing"
               className="flex w-full sm:w-auto items-center justify-center gap-1.5 rounded-xl border border-[#2c2c35] bg-card/30 backdrop-blur-md px-8 py-3.5 text-center text-sm font-bold text-text transition-colors hover:bg-card/60 active:scale-98"
             >
               See Premium Features
