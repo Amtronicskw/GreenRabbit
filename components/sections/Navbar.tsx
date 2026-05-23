@@ -4,12 +4,14 @@ import { MotionDiv, MotionP, MotionH1, MotionH2, MotionH3, MotionHeader } from "
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, Apple, Play } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
     { name: "Features", href: "#features" },
+    { name: "AI Premium", href: "#ai-premium", isGlow: true },
     { name: "Pricing", href: "#pricing" },
   ];
 
@@ -42,10 +44,17 @@ export function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="relative text-sm font-medium text-muted transition-colors hover:text-text py-1 group"
+              className={cn(
+                "relative text-sm font-medium transition-colors py-1 group",
+                link.isGlow 
+                  ? "text-accent hover:text-[#8873ff] font-bold drop-shadow-[0_0_8px_rgba(107,78,255,0.8)]" 
+                  : "text-muted hover:text-text"
+              )}
             >
               {link.name}
-              <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-accent transition-all duration-300 group-hover:w-full" />
+              {!link.isGlow && (
+                <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-accent transition-all duration-300 group-hover:w-full" />
+              )}
             </Link>
           ))}
         </nav>
@@ -98,7 +107,12 @@ export function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-base font-semibold text-muted hover:text-text transition-colors"
+                className={cn(
+                  "text-base font-semibold transition-colors",
+                  link.isGlow 
+                    ? "text-accent drop-shadow-[0_0_8px_rgba(107,78,255,0.8)]" 
+                    : "text-muted hover:text-text"
+                )}
               >
                 {link.name}
               </Link>

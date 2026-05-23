@@ -12,15 +12,15 @@ const aiFeatures = [
     title: "Smart Alerts",
     description: "AI-driven notifications for unusual options activity and key resistance levels. Never miss a breakout.",
     icon: Sparkles,
-    colSpan: "md:col-span-2 md:row-span-1",
+    colSpan: "md:col-span-2 lg:col-span-2 lg:row-span-2",
     delay: 0,
     content: (
       <div className="relative w-full h-48 sm:h-64 mt-6 rounded-2xl overflow-hidden border border-white/5 bg-[#1A1A2E]/50 flex flex-col justify-center items-center">
         {/* Abstract background elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#6B4EFF]/20 to-transparent opacity-50 blur-xl" />
-        
+
         {/* Mock Notification */}
-        <MotionDiv 
+        <MotionDiv
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
@@ -46,9 +46,9 @@ const aiFeatures = [
   {
     id: "news-summary",
     title: "AI News Summary",
-    description: "Instant tl;dr of financial reports, earnings calls, and global market news.",
+    description: "Get instant summary of financial reports, earnings calls, and breaking global market news. Our AI filters the noise so you don't have to.",
     icon: Newspaper,
-    colSpan: "md:col-span-1 md:row-span-1",
+    colSpan: "md:col-span-1",
     delay: 0.08,
   },
   {
@@ -58,11 +58,6 @@ const aiFeatures = [
     icon: Glasses,
     colSpan: "md:col-span-1",
     delay: 0.16,
-    content: (
-      <div className="relative w-full h-48 mt-6 rounded-2xl overflow-hidden border border-white/5">
-        <Image src="/Watchlist.png" alt="Watchlist Summary" fill className="object-cover object-top opacity-80" />
-      </div>
-    ),
   },
   {
     id: "stock-analysis",
@@ -90,7 +85,7 @@ export function AiPremium() {
 
       <div id="ai-premium" className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div className="flex flex-col items-center text-center mb-16 sm:mb-24">
-          <MotionDiv 
+          <MotionDiv
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -100,8 +95,8 @@ export function AiPremium() {
             <Sparkles className="w-4 h-4 text-[#6B4EFF] relative z-10" />
             <span className="text-xs font-bold tracking-widest text-[#6B4EFF] uppercase relative z-10">Premium</span>
           </MotionDiv>
-          
-          <MotionH2 
+
+          <MotionH2
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -110,7 +105,7 @@ export function AiPremium() {
           >
             AI-Powered Premium
           </MotionH2>
-          <MotionP 
+          <MotionP
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -122,7 +117,7 @@ export function AiPremium() {
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(0,1fr)]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {aiFeatures.map((feature) => (
             <MotionDiv
               key={feature.id}
@@ -137,7 +132,7 @@ export function AiPremium() {
             >
               {/* Internal Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1A1A2E]/40 pointer-events-none" />
-              
+
               <div className="relative z-10 flex-1 flex flex-col justify-between h-full">
                 <div>
                   <div className="flex items-center gap-3 mb-4">

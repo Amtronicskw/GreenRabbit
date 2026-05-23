@@ -79,11 +79,11 @@ export function Pricing() {
   ];
 
   return (
-    <section id="pricing" className="relative w-full bg-[#0A0A0C] py-24 sm:py-32 scroll-mt-24">
+    <section className="relative w-full bg-[#0A0A0C] py-24 sm:py-32">
       {/* Visual separation mask */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+      <div id="pricing" className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div className="text-center mb-12 sm:mb-16">
           <MotionH2 
             initial={{ y: 20, opacity: 0 }}
