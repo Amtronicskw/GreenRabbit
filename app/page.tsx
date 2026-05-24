@@ -23,6 +23,7 @@ import { Features } from "@/components/sections/Features";
 import { AiPremium } from "@/components/sections/AiPremium";
 import { Pricing } from "@/components/sections/Pricing";
 import { DownloadSection } from "@/components/sections/DownloadSection";
+import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
   return (
@@ -41,6 +42,7 @@ export default function Home() {
         <Pricing />
         <DownloadSection />
       </main>
+      <Footer />
     </div>
   );
 }
