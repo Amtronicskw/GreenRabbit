@@ -189,6 +189,14 @@ export function Hero() {
                 See Premium Features
               </Link>
             </MotionDiv>
+
+            {/* Secondary CTA: Download */}
+            <Link
+              href="#download"
+              className="flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl border border-[#2c2c35] bg-transparent px-8 py-3.5 text-center text-sm font-bold text-text transition-colors hover:bg-card/50 hover:border-accent/50 active:scale-98"
+            >
+              Go to Download
+            </Link>
           </MotionDiv>
 
         </div>

@@ -22,6 +22,7 @@ import { Ticker } from "@/components/sections/Ticker";
 import { Features } from "@/components/sections/Features";
 import { AiPremium } from "@/components/sections/AiPremium";
 import { Pricing } from "@/components/sections/Pricing";
+import { DownloadSection } from "@/components/sections/DownloadSection";
 
 export default function Home() {
   return (
@@ -38,6 +39,7 @@ export default function Home() {
         <Features />
         <AiPremium />
         <Pricing />
+        <DownloadSection />
       </main>
     </div>
   );
